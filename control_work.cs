@@ -7,7 +7,7 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-﻿Console.WriteLine("Введите количество элементов массива: ");
+Console.WriteLine("Введите количество элементов массива: ");
 int s  = int.Parse(Console.ReadLine());
 
 string[] array1 = new string[s];
@@ -26,3 +26,16 @@ for (int i = 0; i < array1.Length; i++){
 		count++;
 	}   
 }
+string[] array2 = new string[count];
+int j = 0;
+Console.Write($"Полученный массив: [");
+for (int i = 0; i < array1.Length; i++)
+{
+    if(array1[i].Length <= maxsize){
+        array2[j] = array1[i];
+        Console.Write(array2[j] + ",");
+        j++;
+    }
+}
+
+Console.Write($"]");
