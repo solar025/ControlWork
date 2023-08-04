@@ -18,3 +18,11 @@ for (int i = 0; i < s; i++){
 	array1[i] = result;  
 }
 
+int count = 0;
+int maxsize = 3;
+
+for (int i = 0; i < array1.Length; i++){
+	if(array1[i].Length <= maxsize){
+		count++;
+	}   
+}
